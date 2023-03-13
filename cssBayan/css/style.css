@@ -4,8 +4,18 @@
     color: blue;
 }
 
-.ac-container:hover label::after {
+.ac-container .plus {
+    display: none;
+}
+
+.ac-container:hover .plus {
     display: block;
+}
+
+.ac-container label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ac-container:hover label {
@@ -23,13 +33,9 @@
     font-size: 25px;
 }
 
-.ac-container label::after {
-    content: "+";
-    display: none;
-    position: absolute;
-    top: 2px;
-    right: 15px;
-    color: black;
+.ac-div:hover label .plus {
+    transition: transform .35s;
+    transform: rotate(45deg);
 }
 
 .ac-div:hover article  {
@@ -43,8 +49,10 @@
 .ac-container input:checked ~ label {
     color: black;
 }
-.ac-container input:checked ~ label::after {
-    content: "×";
+
+.ac-container input:checked + label .plus {
+    transition: transform .35s;
+    transform: rotate(45deg);
 }
 
 .ac-container input {
@@ -62,8 +70,7 @@
 }
 
 .ac-div article img {
-    margin: 40px auto 40px auto;
-    animation: animat 3s forwards;
+    animation: animat 2s forwards;
 }
 
 @keyframes animat {
