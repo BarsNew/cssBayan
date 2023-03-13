@@ -1,6 +1,15 @@
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 50%;
+    margin: 2rem auto 0 auto;
+}
+
 .ac-container {
-    width: 400px;
-    margin: 10px auto 30px auto;
     color: blue;
 }
 
@@ -27,10 +36,12 @@
     position: relative; 
 }
 
-.ac-container label {
-    cursor: pointer;
-    height: 50px;
-    font-size: 25px;
+.ac-div:active input {
+   cursor: progress;
+}
+
+.ac-div:active label {
+    color: blue;
 }
 
 .ac-div:hover label .plus {
@@ -77,3 +88,21 @@
     0% {width: 60%;}
     100% {width: 80%;}
 }
+
+@media screen and (max-width: 480px) {
+    .ac-container label {
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .ac-container label {
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .ac-container label {
+      font-size: 3em;
+    }
+  }
