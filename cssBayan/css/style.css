@@ -1,0 +1,72 @@
+.ac-container {
+    width: 400px;
+    margin: 10px auto 30px auto;
+    color: blue;
+}
+
+.ac-container:hover label::after {
+    display: block;
+}
+
+.ac-container:hover label {
+    color: black;
+}
+
+.ac-div {
+    border-top: 2px solid black;
+    position: relative; 
+}
+
+.ac-container label {
+    cursor: pointer;
+    height: 50px;
+    font-size: 25px;
+}
+
+.ac-container label::after {
+    content: "+";
+    display: none;
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    color: black;
+}
+
+.ac-div:hover article  {
+    display: block;
+}
+
+.ac-container input:checked ~ article  {
+    display: block;
+}
+
+.ac-container input:checked ~ label {
+    color: black;
+}
+.ac-container input:checked ~ label::after {
+    content: "×";
+}
+
+.ac-container input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+}
+
+.ac-container article {
+    text-align: center;
+    display: none;
+}
+
+.ac-div article img {
+    margin: 40px auto 40px auto;
+    animation: animat 3s forwards;
+}
+
+@keyframes animat {
+    0% {width: 60%;}
+    100% {width: 80%;}
+}
