@@ -2,10 +2,16 @@ body {
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Comic Neue', Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
     margin: 2rem auto 0 auto;
+}
+
+.h1 {
+    font-size: 3em; 
+    font-style: italic;
 }
 
 .ac-container {
@@ -92,6 +98,9 @@ body {
     .ac-container label {
       font-size: 1em;
     }
+    .h1 {
+        font-size: 1.5em; 
+    }
     .wrapper {
         max-width: 90%;
     }
@@ -100,6 +109,9 @@ body {
   @media screen and (min-width: 481px) and (max-width: 1024px) {
     .ac-container label {
       font-size: 2em;
+    }
+    .h1 {
+        font-size: 2.5em; 
     }
     .wrapper {
         max-width: 70%;
