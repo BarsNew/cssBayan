@@ -5,7 +5,6 @@ body {
 }
 
 .wrapper {
-    max-width: 50%;
     margin: 2rem auto 0 auto;
 }
 
@@ -29,28 +28,6 @@ body {
 
 .ac-container:hover label {
     color: black;
-}
-
-.ac-div {
-    border-top: 2px solid black;
-    position: relative; 
-}
-
-.ac-div:active input {
-   cursor: progress;
-}
-
-.ac-div:active label {
-    color: blue;
-}
-
-.ac-div:hover label .plus {
-    transition: transform .35s;
-    transform: rotate(45deg);
-}
-
-.ac-div:hover article  {
-    display: block;
 }
 
 .ac-container input:checked ~ article  {
@@ -80,6 +57,28 @@ body {
     display: none;
 }
 
+.ac-div {
+    border-top: 2px solid black;
+    position: relative; 
+}
+
+.ac-div:active input {
+   cursor: progress;
+}
+
+.ac-div:active label {
+    color: blue;
+}
+
+.ac-div:hover label .plus {
+    transition: transform .35s;
+    transform: rotate(45deg);
+}
+
+.ac-div:hover article  {
+    display: block;
+}
+
 .ac-div article img {
     animation: animat 2s forwards;
 }
@@ -93,11 +92,17 @@ body {
     .ac-container label {
       font-size: 1em;
     }
+    .wrapper {
+        max-width: 90%;
+    }
   }
 
   @media screen and (min-width: 481px) and (max-width: 1024px) {
     .ac-container label {
       font-size: 2em;
+    }
+    .wrapper {
+        max-width: 70%;
     }
   }
 
@@ -105,4 +110,7 @@ body {
     .ac-container label {
       font-size: 3em;
     }
-  }
+    .wrapper {
+        max-width: 50%;
+    }
+}
